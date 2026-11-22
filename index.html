@@ -1,36 +1,218 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tori Sudoku · Sudoku that teaches you</title>
-<meta name="description" content="Sudoku that teaches you. Three puzzles a day, hints that explain why, no ads. Coming soon on Android and iPhone.">
-<meta property="og:title" content="Tori Sudoku"><meta property="og:description" content="Sudoku that teaches you. Three puzzles a day, hints that explain why, no ads.">
-<meta property="og:image" content="https://torisudoku.com/store/feature-en.png"><meta name="theme-color" content="#F4F3EF">
-<link rel="icon" href="/img/mark.svg" type="image/svg+xml"><link rel="preload" href="/fonts/onest-600.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/style.css?v=2"></head><body><main>
-<a class="brand" href="/"><img src="/img/mark.svg" alt="">Tori Sudoku</a>
+<meta name="description" content="Sudoku that teaches you. Three puzzles a day, hints that show you where and why, 200 short lessons, no ads. Coming soon on Android and iPhone.">
+<link rel="canonical" href="https://torisudoku.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://torisudoku.com/">
+<meta property="og:site_name" content="Tori Sudoku">
+<meta property="og:title" content="Tori Sudoku · Sudoku that teaches you">
+<meta property="og:description" content="Three puzzles a day, hints that show you where and why, no ads. Coming soon on Android and iPhone.">
+<meta property="og:image" content="https://torisudoku.com/store/feature-en.png">
+<meta property="og:image:width" content="1024"><meta property="og:image:height" content="500">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@torisudoku">
+<meta name="theme-color" content="#F4F3EF">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="/img/mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/store/icon-512.png">
+<link rel="preload" href="/fonts/onest-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css?v=3">
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="/"><img src="/img/mark.svg" alt="" width="40" height="40"><span data-t="name">Tori Sudoku</span></a>
+  <nav class="navlinks" aria-label="Main">
+    <a class="navlink hide-s" href="/privacy/" data-t="privacy" data-ar-href="/privacy/#ar">Privacy</a>
+    <button class="langbtn" type="button" id="lang" lang="ar">العربية</button>
+    <a class="btn btn-line" href="https://tori-sudoku.pages.dev" data-t="join">Join the test</a>
+  </nav>
+</header>
 
-<section class="hero">
-<div><h1>Sudoku that teaches you.</h1></div>
-<img src="/img/tori.png" alt="Tori the bird">
+<main>
+<section class="wrap hero">
+  <div class="hero-text">
+    <h1 class="title"><span data-t="t1">Tori</span> <span data-t="t2">Sudoku</span></h1>
+    <p class="tag" data-t="tag">Sudoku that teaches you.</p>
+    <p class="line" data-t="line">Three puzzles a day, and hints that show you why, one step at a time.</p>
+    <div class="cta">
+      <a class="btn" href="https://tori-sudoku.pages.dev" data-t="join">Join the test</a>
+      <span class="soon" data-t="soon">Coming soon on Android and iPhone.</span>
+    </div>
+  </div>
+  <img class="hero-bird" src="/img/tori-wave.png" width="720" height="729" alt="Tori the bird, waving" data-t-alt="birdAlt">
 </section>
-<p class="lead">Three puzzles a day. Hints that show you why, one step at a time. No ads, ever.</p>
-<p>Coming soon on Android and iPhone. Want to try it first?</p>
-<p><a class="btn" href="https://tori-sudoku.pages.dev">Join the test</a></p>
-<ul class="facts">
-<li><b>Hints that explain.</b> Tori points to where, then shows why, then lets you place it.</li>
-<li><b>A path to learn.</b> From your first single to X‑Wings, 200 short lessons.</li>
-<li><b>Calm.</b> Grid paper, ink and one orange square. Nothing flashing.</li>
-</ul>
 
-<hr>
-<div dir="rtl" lang="ar">
-<h1>سودوكو يعلّمك.</h1>
-<p class="lead">ثلاثة ألغاز كل يوم. تلميحات توريك ليش، خطوة خطوة. بدون إعلانات أبد.</p>
-<p>قريب على أندرويد وآيفون. تبي تجرّبه قبل الكل؟</p>
-<p><a class="btn" href="https://tori-sudoku.pages.dev">انضم للتجربة</a></p>
-</div>
+<section class="wrap demo-sec" aria-labelledby="demo-h">
+  <div class="sec-head">
+    <h2 id="demo-h" data-t="demoH">Stuck? Tori shows you where, then why.</h2>
+    <p data-t="demoP">Try a hint on a real puzzle. Every hint in Tori works this way.</p>
+  </div>
+  <div class="demo">
+    <div class="board" id="board" dir="ltr" role="img" aria-label="A Sudoku puzzle" data-t-label="boardLabel" data-step="0">
+<span class="box"><span class="c" data-i="0">5</span><span class="c" data-i="1">3</span><span class="c" data-i="2"></span><span class="c" data-i="9">6</span><span class="c" data-i="10"></span><span class="c" data-i="11"></span><span class="c" data-i="18"></span><span class="c" data-i="19">9</span><span class="c" data-i="20">8</span></span>
+<span class="box"><span class="c" data-i="3"></span><span class="c" data-i="4">7</span><span class="c" data-i="5"></span><span class="c" data-i="12">1</span><span class="c" data-i="13">9</span><span class="c" data-i="14">5</span><span class="c" data-i="21"></span><span class="c" data-i="22"></span><span class="c" data-i="23"></span></span>
+<span class="box"><span class="c" data-i="6"></span><span class="c" data-i="7"></span><span class="c" data-i="8"></span><span class="c" data-i="15"></span><span class="c" data-i="16"></span><span class="c" data-i="17"></span><span class="c" data-i="24"></span><span class="c" data-i="25">6</span><span class="c" data-i="26"></span></span>
+<span class="box"><span class="c" data-i="27">8</span><span class="c" data-i="28"></span><span class="c" data-i="29"></span><span class="c" data-i="36">4</span><span class="c" data-i="37"></span><span class="c" data-i="38"></span><span class="c" data-i="45">7</span><span class="c" data-i="46"></span><span class="c" data-i="47"></span></span>
+<span class="box"><span class="c" data-i="30"></span><span class="c" data-i="31">6</span><span class="c" data-i="32"></span><span class="c" data-i="39">8</span><span class="c" data-i="40"></span><span class="c" data-i="41">3</span><span class="c" data-i="48"></span><span class="c" data-i="49">2</span><span class="c" data-i="50"></span></span>
+<span class="box"><span class="c" data-i="33"></span><span class="c" data-i="34"></span><span class="c" data-i="35">3</span><span class="c" data-i="42"></span><span class="c" data-i="43"></span><span class="c" data-i="44">1</span><span class="c" data-i="51"></span><span class="c" data-i="52"></span><span class="c" data-i="53">6</span></span>
+<span class="box"><span class="c" data-i="54"></span><span class="c" data-i="55">6</span><span class="c" data-i="56"></span><span class="c" data-i="63"></span><span class="c" data-i="64"></span><span class="c" data-i="65"></span><span class="c" data-i="72"></span><span class="c" data-i="73"></span><span class="c" data-i="74"></span></span>
+<span class="box"><span class="c" data-i="57"></span><span class="c" data-i="58"></span><span class="c" data-i="59"></span><span class="c" data-i="66">4</span><span class="c" data-i="67">1</span><span class="c" data-i="68">9</span><span class="c" data-i="75"></span><span class="c" data-i="76">8</span><span class="c" data-i="77"></span></span>
+<span class="box"><span class="c" data-i="60">2</span><span class="c" data-i="61">8</span><span class="c" data-i="62"></span><span class="c" data-i="69"></span><span class="c" data-i="70"></span><span class="c" data-i="71">5</span><span class="c" data-i="78"></span><span class="c" data-i="79">7</span><span class="c" data-i="80">9</span></span>
+    </div>
+    <div class="panel-col">
+      <img class="hint-bird" id="hintBird" src="/img/tori-hint.png" width="400" height="365" alt="">
+      <div class="panel">
+        <div class="seg" role="group" aria-label="Hint steps" data-t-label="stepsLabel">
+          <button type="button" data-go="1"><span data-t="seg1">Where</span></button>
+          <button type="button" data-go="2"><span data-t="seg2">Why</span></button>
+          <button type="button" data-go="3"><span data-t="seg3">Place</span></button>
+        </div>
+        <p class="tech" data-t="tech">Naked single</p>
+        <div class="say" aria-live="polite"><p id="say" data-t="s0">Stuck on this board? Ask for a hint.</p></div>
+        <button class="btn" type="button" id="next" data-t="b0">Hint</button>
+      </div>
+    </div>
+  </div>
+</section>
 
-<footer><p>Follow Tori: <a href="https://x.com/torisudoku">X</a> · <a href="https://www.instagram.com/torisudoku/">Instagram</a></p>
-<p class="mute">Google Play and App Store links arrive here the day Tori opens.</p>
-<p><a href="/privacy/">Privacy</a> · <a href="/delete-account/">Delete your account</a> · <a href="mailto:hello@torisudoku.com">hello@torisudoku.com</a></p>
-<p dir="rtl" lang="ar"><a href="/privacy/#ar">الخصوصية</a> · <a href="/delete-account/">حذف الحساب</a></p>
-<p>© 2026 Tori Sudoku</p></footer>
-</main></body></html>
+<section class="wrap feats" aria-label="What Tori does" data-t-label="featsLabel">
+  <div class="feat">
+    <h3 data-t="f1h">Hints that explain</h3>
+    <p data-t="f1p">Tori points to where, then shows why, then lets you place it.</p>
+  </div>
+  <div class="feat">
+    <h3 data-t="f2h">A path to learn</h3>
+    <p data-t="f2p">From your first single to X‑Wings, in 200 short lessons.</p>
+  </div>
+  <div class="feat">
+    <h3 data-t="f3h">Calm. No ads, ever.</h3>
+    <p data-t="f3p">Grid paper, ink and one orange square. Nothing flashes, nothing nags.</p>
+  </div>
+</section>
+
+<section class="wrap daily" aria-labelledby="daily-h">
+  <div class="daily-text">
+    <h2 id="daily-h" data-t="dH">Three puzzles a day</h2>
+    <p data-t="dP">Easy, medium and hard, new every day. Play them whenever you like.</p>
+    <ul class="levels">
+      <li><span class="sq" aria-hidden="true"><i class="on"></i><i></i><i></i></span><b data-t="easy">Easy</b><span class="mute" data-t="easyT">About 5 min</span></li>
+      <li><span class="sq" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i></span><b data-t="med">Medium</b><span class="mute" data-t="medT">About 10 min</span></li>
+      <li><span class="sq" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i></span><b data-t="hard">Hard</b><span class="mute" data-t="hardT">About 20 min</span></li>
+    </ul>
+    <p data-t="feather">Miss a day? A feather keeps your streak safe.</p>
+  </div>
+  <figure class="shot">
+    <img id="shot" src="/img/today-en.webp" data-ar-src="/img/today-ar.webp" width="705" height="1220" loading="lazy" alt="The Today screen in Tori: the easy, medium and hard puzzles of the day" data-t-alt="shotAlt">
+  </figure>
+</section>
+
+<section class="wrap closing" aria-labelledby="close-h">
+  <div>
+    <h2 id="close-h" data-t="cH">Tori opens soon on Android and iPhone.</h2>
+    <p data-t="cP">Join the test to play it before everyone else.</p>
+    <p><a class="btn" href="https://tori-sudoku.pages.dev" data-t="join">Join the test</a></p>
+    <p class="mute" data-t="stores">Google Play and App Store links arrive here the day Tori opens.</p>
+  </div>
+  <img class="close-bird" src="/img/tori-sit.png" width="400" height="402" loading="lazy" alt="">
+</section>
+</main>
+
+<footer class="wrap"><div class="foot">
+  <div>
+    <a class="brand" href="/"><img src="/img/mark.svg" alt="" width="40" height="40"><span data-t="name">Tori Sudoku</span></a>
+  </div>
+  <div>
+    <h4 data-t="follow">Follow Tori</h4>
+    <p><a href="https://x.com/torisudoku">X</a><br><a href="https://www.instagram.com/torisudoku/">Instagram</a></p>
+  </div>
+  <div>
+    <h4 data-t="contact">Write to us</h4>
+    <p><a href="mailto:hello@torisudoku.com">hello@torisudoku.com</a></p>
+  </div>
+  <div>
+    <h4 data-t="legal">Your data</h4>
+    <p><a href="/privacy/" data-t="privacy" data-ar-href="/privacy/#ar">Privacy</a><br><a href="/delete-account/" data-t="delete" data-ar-href="/delete-account/#ar">Delete your account</a></p>
+  </div>
+  <p class="copy mute" data-t="copy">© 2026 Tori Sudoku</p>
+</div></footer>
+
+<script>
+(function(){
+var AR={
+name:"توري سودوكو",privacy:"الخصوصية",join:"انضم للتجربة",t1:"توري",t2:"سودوكو",
+tag:"سودوكو يعلّمك.",line:"ثلاثة ألغاز كل يوم، وتلميحات توريك ليش، خطوة خطوة.",
+soon:"قريب على أندرويد وآيفون.",birdAlt:"توري الطير يسلّم",
+demoH:"علقت؟ توري يوريك وين، وبعدين ليش.",demoP:"جرّب تلميح على لغز حقيقي. كل تلميحات توري تمشي كذا.",
+boardLabel:"لغز سودوكو",stepsLabel:"خطوات التلميح",seg1:"وين",seg2:"ليش",seg3:"حطّه",tech:"رقم وحيد",
+s0:"علقت في هاللوحة؟ اطلب تلميح.",b0:"تلميح",
+s1:"شوف هذي الخانة: ما يركب فيها إلا رقم واحد.",b1:"ليش؟",
+s2:"صفّها وعمودها ومربعها فيها 1 و2 و3 و4 و6 و7 و8 و9. ما بقى إلا 5.",b2:"وريني",
+s3:"هنا 5. والمرة الجاية بتلقاها بنفسك.",b3:"من جديد",
+featsLabel:"وش يسوي توري",
+f1h:"تلميحات تشرح",f1p:"توري يوريك وين، وبعدين ليش، وبعدين تحطها بنفسك.",
+f2h:"طريق تتعلّم فيه",f2p:"من أول رقم وحيد إلى جناح X، في 200 درس قصير.",
+f3h:"هادي. بدون إعلانات، أبد.",f3p:"ورق مربعات وحبر ومربع برتقالي واحد. ما فيه شي يومض ولا يزعجك.",
+dH:"3 ألغاز كل يوم",dP:"سهل ومتوسط وصعب، جديدة كل يوم. العبها على راحتك.",
+easy:"سهل",easyT:"تقريباً 5 دقايق",med:"متوسط",medT:"تقريباً 10 دقايق",hard:"صعب",hardT:"تقريباً 20 دقيقة",
+feather:"فوّت يوم؟ الريشة تحفظ سلسلتك.",shotAlt:"شاشة «اليوم» في توري: لغز اليوم السهل والمتوسط والصعب",
+cH:"توري يفتح قريب على أندرويد وآيفون.",cP:"انضم للتجربة والعبه قبل الكل.",
+stores:"روابط Google Play وApp Store توصل هنا يوم يفتح توري.",
+follow:"تابع توري",contact:"راسلنا",legal:"بياناتك",delete:"حذف حسابك",copy:"© 2026 توري سودوكو"
+};
+var EN={s1:"Look at this cell: only one number fits.",b1:"Why?",
+s2:"Its row, column and box already hold 1, 2, 3, 4, 6, 7, 8 and 9. Only 5 is left.",b2:"Show me",
+s3:"5 goes here. Next time you’ll spot it yourself.",b3:"Start again"};
+var doc=document.documentElement,lang="en",step=0;
+function q(s){return Array.prototype.slice.call(document.querySelectorAll(s))}
+q("[data-t]").forEach(function(e){EN[e.getAttribute("data-t")]=e.textContent});
+q("[data-t-alt]").forEach(function(e){EN[e.getAttribute("data-t-alt")]=e.alt});
+q("[data-t-label]").forEach(function(e){EN[e.getAttribute("data-t-label")]=e.getAttribute("aria-label")});
+q("[data-ar-href]").forEach(function(e){e.setAttribute("data-en-href",e.getAttribute("href"))});
+var shot=document.getElementById("shot");shot.setAttribute("data-en-src",shot.getAttribute("src"));
+function T(k){return (lang==="ar"?AR:EN)[k]}
+function setLang(l,save){
+  lang=l==="ar"?"ar":"en";var ar=lang==="ar";
+  doc.lang=lang;doc.dir=ar?"rtl":"ltr";
+  q("[data-t]").forEach(function(e){e.textContent=T(e.getAttribute("data-t"))});
+  q("[data-t-alt]").forEach(function(e){e.alt=T(e.getAttribute("data-t-alt"))});
+  q("[data-t-label]").forEach(function(e){e.setAttribute("aria-label",T(e.getAttribute("data-t-label")))});
+  q("[data-ar-href]").forEach(function(e){e.href=e.getAttribute(ar?"data-ar-href":"data-en-href")});
+  shot.src=shot.getAttribute(ar?"data-ar-src":"data-en-src");
+  var b=document.getElementById("lang");b.textContent=ar?"English":"العربية";b.lang=ar?"en":"ar";
+  document.title=ar?"توري سودوكو · سودوكو يعلّمك":"Tori Sudoku · Sudoku that teaches you";
+  render(false);
+  if(save){try{localStorage.setItem("tori-lang",lang)}catch(e){}}
+}
+/* hint demo: target cell 40 (row 5, column 5), answer 5 */
+var board=document.getElementById("board"),say=document.getElementById("say"),next=document.getElementById("next"),bird=document.getElementById("hintBird");
+var cells={};q("#board .c").forEach(function(c){cells[c.getAttribute("data-i")]=c});
+var unit=[];for(var k=0;k<9;k++){unit.push(36+k,k*9+4)}
+for(var r=3;r<6;r++)for(var c=3;c<6;c++)unit.push(r*9+c);
+var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function render(anim,dir){
+  board.setAttribute("data-step",step);
+  unit.forEach(function(i){cells[i].classList.toggle("shade",step===2)});
+  var t=cells[40];t.classList.toggle("mark",step>=1);t.classList.toggle("placed",step===3);t.textContent=step===3?"5":"";
+  say.textContent=T("s"+step);say.setAttribute("data-t","s"+step);
+  next.textContent=T("b"+step);next.setAttribute("data-t","b"+step);
+  bird.src=step===3?"/img/tori-yay.png":"/img/tori-hint.png";
+  q(".seg button").forEach(function(b){var g=+b.getAttribute("data-go");b.setAttribute("aria-pressed",g===step?"true":"false")});
+  if(anim&&!reduce){var s=(lang==="ar"?-1:1)*(dir||1);say.animate([{transform:"translateX("+(12*s)+"px)",opacity:0},{transform:"none",opacity:1}],{duration:200,easing:"cubic-bezier(.2,.8,.2,1)"})}
+}
+function go(n){var d=n>=step?1:-1;step=n;render(true,d)}
+next.addEventListener("click",function(){go(step===3?0:step+1)});
+q(".seg button").forEach(function(b){b.addEventListener("click",function(){go(+b.getAttribute("data-go"))})});
+document.getElementById("lang").addEventListener("click",function(){setLang(lang==="ar"?"en":"ar",true)});
+var pick=null;
+try{var m=location.search.match(/[?&]lang=(ar|en)/);if(m)pick=m[1]}catch(e){}
+if(!pick){try{pick=localStorage.getItem("tori-lang")}catch(e){}}
+if(!pick){var ls=navigator.languages||[navigator.language||"en"];pick=/^ar/i.test(ls[0]||"")?"ar":"en"}
+if(pick==="ar")setLang("ar",false);else render(false);
+})();
+</script>
+</body>
+</html>
