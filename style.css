@@ -3,7 +3,6 @@
 @font-face{font-family:"Readex Pro";src:url(/fonts/readex-400.woff2) format("woff2");font-weight:400;font-display:swap}
 @font-face{font-family:"Readex Pro";src:url(/fonts/readex-600.woff2) format("woff2");font-weight:600;font-display:swap}
 :root{--bg:#F4F3EF;--ink:#141414;--mute:#6B6862;--line:#D9D6CF;--acc:#B84A0C;--fill:#F26A1B}
-@media (prefers-color-scheme:dark){:root{--bg:#201F1D;--ink:#F1EFEA;--mute:#A8A59E;--line:#3A3936;--acc:#FF7A33;--fill:#FF7A33}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Onest,"Readex Pro",system-ui,sans-serif;
